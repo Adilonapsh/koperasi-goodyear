@@ -5,10 +5,9 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <button data-drawer-target="sidebar-multi-level-sidebar"
-                        data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar"
-                        type="button"
-                        class="inline-flex items-center justify-center me-4 p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 md:hidden transition duration-150 ease-in-out">
+                    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar"
+                        aria-controls="default-sidebar" type="button"
+                        class="inline-flex items-center p-2 mt-2 me-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
                         <span class="sr-only">Open sidebar</span>
                         <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +16,7 @@
                             </path>
                         </svg>
                     </button>
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('dashboard') }}" class="hidden md:block">
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
@@ -28,6 +27,12 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div> --}}
+            </div>
+
+            <div class="shrink-0 flex items-center block md:hidden">
+                <a href="{{ route('dashboard') }}">
+                    <x-application-mark class="block h-9 w-auto" />
+                </a>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
