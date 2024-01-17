@@ -19,13 +19,13 @@ return new class extends Migration
             $table->integer("stime");
             $table->integer("htime");
             $table->string("flat");
-            $table->int("kode_int");
-            $table->int("year");
-            $table->int("rate");
-            $table->int("achkal");
-            $table->int("prioritas");
+            $table->integer("kode_int");
+            $table->integer("year");
+            $table->integer("rate");
+            $table->integer("achkal");
+            $table->integer("prioritas");
             $table->foreignId("user_id");
-            $table->$table->timestamps();
+            $table->timestamps();
         });
     }
 
