@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PotonganKoperasiController;
 use App\Http\Controllers\StatusDanaSegarController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,4 +29,5 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('status-dana-segar', StatusDanaSegarController::class);
+    Route::resource('potongan-koperasi', PotonganKoperasiController::class);
 });

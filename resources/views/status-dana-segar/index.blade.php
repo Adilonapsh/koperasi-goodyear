@@ -9,12 +9,12 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <div class="mb-5">
-                    <h5 class="text-2xl mb-2 bg-cyan-200 py-5 text-center">Syarat dan Ketentuan</h5>
+                    <h5 class="text-2xl mb-2 bg-gray-900 text-white py-5 text-center">Syarat dan Ketentuan</h5>
                     <div class="px-5">
                         <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
                             <tr>
                                 <td>Minimum Belanja</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->min_belanja)  }}</td>
+                                <td class="text-end">Rp. {{ number_format(Auth::user()->min_belanja) }}</td>
                             </tr>
                             <tr>
                                 <td>Maksimum Pinjaman</td>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="mb-5">
-                    <h5 class="text-2xl mb-2 bg-cyan-200 py-5 text-center">Kondisi Saat Ini</h5>
+                    <h5 class="text-2xl mb-2 bg-gray-900 text-white py-5 text-center">Kondisi Saat Ini</h5>
                     <div class="px-5">
                         <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
                             <tr>
@@ -43,8 +43,6 @@
                     </div>
                 </div>
             </div>
-            <livewire:users-table/>
         </div>
     </div>
 </x-app-layout>
-

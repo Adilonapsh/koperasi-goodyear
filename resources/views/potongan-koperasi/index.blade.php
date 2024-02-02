@@ -7,15 +7,7 @@
 
     <div class="py-12 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div>
-                <label for="">Bulan</label>
-                <select id="">
-                    <option value="">
-
-                    </option>
-                </select>
-            </div>
+            <livewire:data-potongan-koperasi-layouts />
         </div>
     </div>
 </x-app-layout>
-

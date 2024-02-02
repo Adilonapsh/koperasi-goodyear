@@ -14,27 +14,41 @@
             </div>
             <div class="bg-gray-50 p-10 rounded-lg shadow-lg">
                 <div class="grid grid-cols-3 gap-3">
-                    <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
-                        <p>Status Dana Segar</p>
-                    </div>
-                    <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
-                        <p>Potongan Koperasi</p>
-                    </div>
-                    <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
-                        <p>Plafon Konsumsi</p>
-                    </div>
-                    <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
-                        <p>Transaksi Konsumsi</p>
-                    </div>
-                    <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
-                        <p>Harga Barang</p>
-                    </div>
-                    <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
-                        <p>Simpanan</p>
-                    </div>
-                    <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
-                        <p>Upload Harian</p>
-                    </div>
+                    <a href="{{ route('status-dana-segar.index') }}" class="hover:shadow-lg transition-all">
+                        <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
+                            <p>Status Dana Segar</p>
+                        </div>
+                    </a>
+                    <a href="{{ route('potongan-koperasi.index') }}" class="hover:shadow-lg transition-all">
+                        <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
+                            <p>Potongan Koperasi</p>
+                        </div>
+                    </a>
+                    <a href="#" class="hover:shadow-lg transition-all">
+                        <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
+                            <p>Plafon Konsumsi</p>
+                        </div>
+                    </a>
+                    <a href="#" class="hover:shadow-lg transition-all">
+                        <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
+                            <p>Transaksi Konsumsi</p>
+                        </div>
+                    </a>
+                    <a href="#" class="hover:shadow-lg transition-all">
+                        <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
+                            <p>Harga Barang</p>
+                        </div>
+                    </a>
+                    <a href="#" class="hover:shadow-lg transition-all">
+                        <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
+                            <p>Simpanan</p>
+                        </div>
+                    </a>
+                    <a href="#" class="hover:shadow-lg transition-all">
+                        <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
+                            <p>Upload Harian</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
