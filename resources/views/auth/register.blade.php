@@ -28,6 +28,12 @@
             </div>
 
             <div class="mt-4">
+                <x-label for="cc" value="{{ __('CC') }}" />
+                <x-input id="cc" class="block mt-1 w-full" type="cc" name="cc" :value="old('cc')"
+                    required autocomplete="username" />
+            </div>
+
+            <div class="mt-4">
                 <x-label for="password" value="{{ __('Password') }}" />
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
                     autocomplete="new-password" />
