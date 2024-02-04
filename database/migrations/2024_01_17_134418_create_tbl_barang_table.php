@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("kode_barang");
             $table->text("nama_barang");
+            $table->text("satuan");
             $table->string("harga_jual");
             $table->foreignId("user_id");
             $table->timestamps();

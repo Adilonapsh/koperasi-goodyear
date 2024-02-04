@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('cc')->nullable();
             $table->string('min_belanja')->default(0);
             $table->string('maks_ds')->nullable();
-            $table->bigInteger('pinjaman_sebelumnya')->nullable();
+            $table->string('pinjaman_sebelumnya')->nullable();
             $table->bigInteger('total_belanja')->nullable();
             $table->string('sisa_lalu')->nullable();
             $table->text('ket')->nullable();

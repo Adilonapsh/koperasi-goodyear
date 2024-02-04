@@ -8,7 +8,7 @@ class DataPotonganKoperasiLayouts extends Component
 {
     public $bulan, $tahun;
 
-    public $is_table_show = false;
+    public $is_table_loaded = false;
     public $data_terpotong = [];
 
     public function mount()
@@ -18,7 +18,7 @@ class DataPotonganKoperasiLayouts extends Component
 
     public function showTable()
     {
-        $this->is_table_show = true;
+        $this->is_table_loaded = true;
     }
 
 

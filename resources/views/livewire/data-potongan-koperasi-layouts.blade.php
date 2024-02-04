@@ -53,7 +53,7 @@
     </div>
 
 
-    @if (!$is_table_show)
+    @if (!$is_table_loaded)
         <div wire:loading wire:target="showTable">
             <div role="status" class="max-w-sm animate-pulse mb-3">
                 <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
@@ -99,7 +99,7 @@
             </div>
         </div>
     @endif
-    @if ($is_table_show)
+    @if ($is_table_loaded)
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
                 <h5 class="text-2xl mb-2 bg-gray-900 text-white py-5 text-center">Daftar Yang Terpotong</h5>
@@ -117,19 +117,19 @@
                             </tr>
                             <tr>
                                 <td>Jumlah Potongan</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Saldo</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Jangka Waktu</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Bayar</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
 
                         </table>
@@ -149,19 +149,19 @@
                             </tr>
                             <tr>
                                 <td>Jumlah Potongan</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Saldo</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Jangka Waktu</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Bayar</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
 
                         </table>
@@ -182,19 +182,19 @@
                             </tr>
                             <tr>
                                 <td>Jumlah Potongan</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Saldo</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Jangka Waktu</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Bayar</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
 
                         </table>
@@ -217,19 +217,19 @@
                             </tr>
                             <tr>
                                 <td>Jumlah Tidak Dipotong</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Saldo</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Jangka Waktu</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Bayar</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                         </table>
                     </div>
@@ -249,19 +249,19 @@
                             </tr>
                             <tr>
                                 <td>Jumlah Tidak Dipotong</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Saldo</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Jangka Waktu</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                             <tr>
                                 <td>Bayar</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                         </table>
                     </div>

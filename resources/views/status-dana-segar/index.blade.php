@@ -22,7 +22,7 @@
                             </tr>
                             <tr>
                                 <td>Pinjaman Sebelumnya</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->pinjaman_sebelumnya) }}</td>
+                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
                             </tr>
                         </table>
                     </div>
@@ -37,7 +37,7 @@
                             </tr>
                             <tr>
                                 <td>Pinjaman Sebelumnya</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->sisa_lalu) }}</td>
+                                <td class="text-end">{{ Auth::user()->sisa_lalu }}</td>
                             </tr>
                         </table>
                     </div>

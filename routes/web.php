@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PlafonKonsumsiController;
 use App\Http\Controllers\PotonganKoperasiController;
+use App\Http\Controllers\SimpananController;
 use App\Http\Controllers\StatusDanaSegarController;
+use App\Http\Controllers\TransaksiKonsumsiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,4 +34,8 @@ Route::middleware([
 
     Route::resource('status-dana-segar', StatusDanaSegarController::class);
     Route::resource('potongan-koperasi', PotonganKoperasiController::class);
+    Route::resource('plafon-konsumsi', PlafonKonsumsiController::class);
+    Route::resource('transaksi-konsumsi', TransaksiKonsumsiController::class);
+    Route::resource('barang', BarangController::class);
+    Route::resource('simpanan', SimpananController::class);
 });

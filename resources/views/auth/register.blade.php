@@ -29,8 +29,8 @@
 
             <div class="mt-4">
                 <x-label for="cc" value="{{ __('CC') }}" />
-                <x-input id="cc" class="block mt-1 w-full" type="cc" name="cc" :value="old('cc')"
-                    required autocomplete="username" />
+                <x-input id="cc" class="block mt-1 w-full" type="text" name="cc" :value="old('cc')"
+                    required autocomplete="cc" />
             </div>
 
             <div class="mt-4">
