@@ -1,40 +1,50 @@
 <div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div class="grid grid-cols-1 lg:grid-cols-1 gap-10">
         <div class="mb-5">
-            <h5 class="text-2xl mb-2 bg-gray-900 text-white py-5 text-center">Transaksi Belanja Kredit</h5>
+            {{-- @json($fjkrDetail) --}}
+            <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Transaksi Belanja Kredit</h5>
             <div class="px-5">
                 <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
-                    <tr>
-                        <th>K2301.0001 15-01-2024</th>
+                    @php
+                        $subTotal = 0;
+                        $grandTotal = 0;
+                    @endphp
+                    @foreach ($fjkrDetail as $fjkr)
+                        @if (count($fjkr->fjkrDetail) !== 0)
+                            <tr class="my-2">
+                                <th class="bg-green-300 border border-green-400 py-3" colspan="3">{{ $fjkr->no_fj }} {{ $fjkr->tgl_fj }}</th>
+                            </tr>
+                            @foreach ($fjkr->fjkrDetail as $key => $detail)
+                                <tr>
+                                    <td class="px-4 border border-slate-600">
+                                        {{ $detail->jumlah_harga }}
+                                        {{ $detail->fk_barang ? $detail->fk_barang->satuan : "PCS" }}
+                                        {{ $detail->kode_barang }}
+                                        {{ $detail->fk_barang ? $detail->fk_barang->nama_barang : $detail->kode_barang }}
+                                    </td>
+                                    <td class="text-end border border-slate-600">Rp. {{ number_format($detail->harga_jual) }}</td>
+                                    <td class="text-end border border-slate-600">Rp. {{ number_format(($detail->jumlah_harga * $detail->harga_jual)) }}</td>
+                                    @php
+                                        $subTotal += $detail->jumlah_harga * $detail->harga_jual;
+                                        $grandTotal += $detail->jumlah_harga * $detail->harga_jual;
+                                    @endphp
+                                </tr>
+                            @endforeach
+                        @endif
+                    @endforeach
+                    <tr class="font-bold">
+                        <td class="border border-slate-600">Sub Total</td>
+                        <td class="text-end border border-slate-600" colspan="2">Rp. {{ number_format($subTotal) }}</td>
                     </tr>
-                    <tr>
-                        <td>999 PCS 1234567890123 Kacang Kulit</td>
-                        <td class="text-end">Rp. {{ number_format(Auth::user()->min_belanja) }}</td>
-                        <td class="text-end">Rp. {{ number_format(Auth::user()->min_belanja) }}</td>
-                    </tr>
-                    <tr>
-                        <th>K2301.0001 15-01-2024</th>
-                    </tr>
-                    <tr>
-                        <td>999 PCS 1234567890123 Indomie Goreng</td>
-                        <td class="text-end">Rp. {{ number_format(Auth::user()->maks_ds) }}</td>
-                        <td class="text-end">Rp. {{ number_format(Auth::user()->maks_ds) }}</td>
-                    </tr>
-                    <tr>
-                        <td>Sub Total</td>
-                        <td class="text-end"></td>
-                        <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                    </tr>
-                    <tr>
-                        <td>Grand Sub Total</td>
-                        <td class="text-end"></td>
-                        <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
+                    <tr class="font-bold">
+                        <td class="border border-slate-600">Grand Sub Total</td>
+                        <td class="text-end border border-slate-600" colspan="2">Rp. {{ number_format($grandTotal) }}</td>
                     </tr>
                 </table>
             </div>
         </div>
         <div class="mb-5">
-            <h5 class="text-2xl mb-2 bg-gray-900 text-white py-5 text-center">Angsuran PK</h5>
+            <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Angsuran PK</h5>
             <div class="px-5">
                 <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
                     <tr>

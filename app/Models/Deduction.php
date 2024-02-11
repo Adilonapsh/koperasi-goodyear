@@ -13,6 +13,22 @@ class Deduction extends Model
 
     protected $table = "tbl_deduction";
 
+    protected $fillable = [
+        "active",
+        "tanggal",
+        "cc",
+        "bulan",
+        "group_id",
+        "principal",
+        "interest",
+        "original",
+        "balance",
+        "paytime",
+        "repaytime",
+        "aruded",
+        "dedprin",
+        "user_id",
+    ];
 
     public function member() : BelongsTo
     {
@@ -21,6 +37,6 @@ class Deduction extends Model
 
     public function group() : HasOne
     {
-        return $this->hasOne(InviteGroup::class, 'group', 'id');
+        return $this->hasOne(InviteGroup::class, 'id', 'group_id');
     }
 }

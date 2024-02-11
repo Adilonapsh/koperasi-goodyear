@@ -14,7 +14,7 @@
         </div>
         <div class="self-end lg:mb-5 ">
             <button
-                class="w-full lg:w-fit text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 "
+                class="w-full lg:w-fit text-white bg-green-800 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 "
                 wire:click="loadData">
                 <div class="text-center" wire:loading wire:target="loadData">
                     <div role="status mr-2">
@@ -85,7 +85,7 @@
         @endif
         @if ($is_table_loaded)
             <div class="mb-5">
-                <h5 class="text-2xl mb-2 bg-gray-900 text-white py-5 text-center">{{ $simpanan }}</h5>
+                <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">{{ $simpanan }}</h5>
                 <div class="px-5">
                     <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
                         <tr>

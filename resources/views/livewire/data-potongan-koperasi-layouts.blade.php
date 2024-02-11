@@ -4,33 +4,39 @@
             <label for="bulan" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bulan</label>
             <select id="bulan" wire:model="bulan"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option value="Januari">Januari</option>
-                <option value="Februari">Februari</option>
-                <option value="Maret">Maret</option>
-                <option value="April">April</option>
-                <option value="Mei">Mei</option>
-                <option value="Juni">Juni</option>
-                <option value="Juli">Juli</option>
-                <option value="Agustus">Agustus</option>
-                <option value="September">September</option>
-                <option value="Oktober">Oktober</option>
-                <option value="November">November</option>
-                <option value="Desember">Desember</option>
+                @if (!$bulan)
+                    <option value="">Pilih Bulan</option>
+                @endif
+                <option value="01">Januari</option>
+                <option value="02">Februari</option>
+                <option value="03">Maret</option>
+                <option value="04">April</option>
+                <option value="05">Mei</option>
+                <option value="06">Juni</option>
+                <option value="07">Juli</option>
+                <option value="08">Agustus</option>
+                <option value="09">September</option>
+                <option value="10">Oktober</option>
+                <option value="11">November</option>
+                <option value="12">Desember</option>
             </select>
         </div>
         <div class="lg:mb-5">
             <label for="tahun" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tahun</label>
             <select id="tahun" wire:model="tahun"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option value="2024">2024</option>
-                <option value="2025">2025</option>
-                <option value="2026">2026</option>
-                <option value="2027">2027</option>
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                required>
+                @if (!$tahun)
+                    <option value="">Pilih Tahun</option>
+                @endif
+                @foreach ($yearAvailable as $item)
+                    <option value="{{ $item }}">{{ $item }}</option>
+                @endforeach
             </select>
         </div>
         <div class="self-end lg:mb-5 ">
             <button
-                class="w-full lg:w-fit text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 "
+                class="w-full lg:w-fit text-white bg-green-900 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 "
                 wire:click="showTable">
                 <div class="text-center" wire:loading wire:target="showTable">
                     <div role="status mr-2">
@@ -100,42 +106,50 @@
         </div>
     @endif
     @if ($is_table_loaded)
+    {{-- @json($deductionData); --}}
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
-                <h5 class="text-2xl mb-2 bg-gray-900 text-white py-5 text-center">Daftar Yang Terpotong</h5>
+                <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Daftar Yang Terpotong</h5>
                 <div class="mb-5 px-2">
-                    <p class="font-bold">301 Simpanan Wajib</p>
-                    <div class="px-5">
-                        <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
-                            <tr>
-                                <td>Jumlah</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->min_belanja) }}</td>
-                            </tr>
-                            <tr>
-                                <td>Jasa Pinjaman</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->maks_ds) }}</td>
-                            </tr>
-                            <tr>
-                                <td>Jumlah Potongan</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Saldo</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Jangka Waktu</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Bayar</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-
-                        </table>
-                    </div>
+                    @if(count($deductionData) === 0)
+                        <p>Tidak ada data pada Bulan {{ \Carbon\Carbon::createFromDate($tahun,$bulan,1)->format("F") }} tahun {{ $tahun }}</p>
+                    @endif
+                    @foreach ($deductionData as $groupName => $deduction)
+                        <p class="font-bold mb-2">{{ $deduction[0]->group_id }} {{ $groupName }}</p>
+                        @foreach ($deduction as $item)
+                            <div class="px-5">
+                                <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
+                                    <tr>
+                                        <td>Jumlah</td>
+                                        <td class="text-end">Rp. {{ number_format($item->principal) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jasa Pinjaman</td>
+                                        <td class="text-end">Rp. {{ number_format($item->interest) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jumlah Potongan</td>
+                                        <td class="text-end">Rp. {{ number_format(($item->interest + $item->principal)) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saldo</td>
+                                        <td class="text-end">Rp. {{ number_format($item->balance) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jangka Waktu</td>
+                                        <td class="text-end">Rp. {{ number_format($item->paytime) }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bayar</td>
+                                        <td class="text-end">Rp. {{ number_format($item->repaytime) }}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <hr class="my-2">
+                        @endforeach
+                    @endforeach
                 </div>
-                <div class="mb-5 px-2">
+                {{-- <div class="mb-5 px-2">
                     <p class="font-bold">302 Simpanan Sukarela</p>
                     <div class="px-5">
                         <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
@@ -166,9 +180,9 @@
 
                         </table>
                     </div>
-                </div>
+                </div> --}}
                 <hr class="mb-2">
-                <div class="mb-5 px-2">
+                {{-- <div class="mb-5 px-2">
                     <p class="font-bold">Total</p>
                     <div class="px-5">
                         <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
@@ -199,10 +213,10 @@
 
                         </table>
                     </div>
-                </div>
+                </div> --}}
             </div>
-            <div>
-                <h5 class="text-2xl mb-2 bg-gray-900 text-white py-5 text-center">Daftar Yang Tidak Terpotong</h5>
+            {{-- <div>
+                <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Daftar Yang Tidak Terpotong</h5>
                 <div class="mb-5 px-2">
                     <p class="font-bold">273T Perpanjangan 5 Bulan</p>
                     <div class="px-5">
@@ -266,7 +280,7 @@
                         </table>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     @endif
 

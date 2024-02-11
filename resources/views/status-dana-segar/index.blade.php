@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <div class="mb-5">
-                    <h5 class="text-2xl mb-2 bg-gray-900 text-white py-5 text-center">Syarat dan Ketentuan</h5>
+                    <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Syarat dan Ketentuan</h5>
                     <div class="px-5">
                         <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
                             <tr>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="mb-5">
-                    <h5 class="text-2xl mb-2 bg-gray-900 text-white py-5 text-center">Kondisi Saat Ini</h5>
+                    <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Kondisi Saat Ini</h5>
                     <div class="px-5">
                         <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
                             <tr>
@@ -40,6 +40,9 @@
                                 <td class="text-end">{{ Auth::user()->sisa_lalu }}</td>
                             </tr>
                         </table>
+                    </div>
+                    <div class="mb-5">
+                        <p class="text-center font-bold">{{ str_replace("_"," ",Auth::user()->ket)  }}</p>
                     </div>
                 </div>
             </div>
