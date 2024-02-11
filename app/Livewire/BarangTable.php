@@ -33,9 +33,9 @@ class BarangTable extends DataTableComponent
                     return ($data) ? "Rp. ". number_format($data,0) : "Rp. 0";
                 })
                 ->sortable(),
-            Column::make("Created at", "created_at")
+            Column::make("Dibuat pada", "created_at")
                 ->sortable(),
-            Column::make("Updated at", "updated_at")
+            Column::make("Diupdate pada", "updated_at")
                 ->sortable(),
         ];
     }

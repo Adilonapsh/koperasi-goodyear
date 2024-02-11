@@ -3,7 +3,7 @@
         <div class="mb-5">
             {{-- @json($fjkrDetail) --}}
             <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Transaksi Belanja Kredit</h5>
-            <div class="px-5">
+            <div class="px-0 lg:px-5">
                 <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
                     @php
                         $subTotal = 0;
@@ -16,14 +16,14 @@
                             </tr>
                             @foreach ($fjkr->fjkrDetail as $key => $detail)
                                 <tr>
-                                    <td class="px-4 border border-slate-600">
+                                    <td class="px-4 border">
                                         {{ $detail->jumlah_harga }}
                                         {{ $detail->fk_barang ? $detail->fk_barang->satuan : "PCS" }}
                                         {{ $detail->kode_barang }}
                                         {{ $detail->fk_barang ? $detail->fk_barang->nama_barang : $detail->kode_barang }}
                                     </td>
-                                    <td class="text-end border border-slate-600">Rp. {{ number_format($detail->harga_jual) }}</td>
-                                    <td class="text-end border border-slate-600">Rp. {{ number_format(($detail->jumlah_harga * $detail->harga_jual)) }}</td>
+                                    <td class="text-end border">Rp. {{ number_format($detail->harga_jual) }}</td>
+                                    <td class="text-end border">Rp. {{ number_format(($detail->jumlah_harga * $detail->harga_jual)) }}</td>
                                     @php
                                         $subTotal += $detail->jumlah_harga * $detail->harga_jual;
                                         $grandTotal += $detail->jumlah_harga * $detail->harga_jual;
@@ -32,13 +32,13 @@
                             @endforeach
                         @endif
                     @endforeach
-                    <tr class="font-bold">
-                        <td class="border border-slate-600">Sub Total</td>
-                        <td class="text-end border border-slate-600" colspan="2">Rp. {{ number_format($subTotal) }}</td>
+                    <tr class="font-bold ">
+                        <td class="border bg-green-300 border-green-400 py-3">Sub Total</td>
+                        <td class="text-end border bg-green-300 border-green-400" colspan="2">Rp. {{ number_format($subTotal) }}</td>
                     </tr>
-                    <tr class="font-bold">
-                        <td class="border border-slate-600">Grand Sub Total</td>
-                        <td class="text-end border border-slate-600" colspan="2">Rp. {{ number_format($grandTotal) }}</td>
+                    <tr class="font-bold ">
+                        <td class="border bg-green-300 border-green-400 py-3">Grand Sub Total</td>
+                        <td class="text-end border bg-green-300 border-green-400" colspan="2">Rp. {{ number_format($grandTotal) }}</td>
                     </tr>
                 </table>
             </div>

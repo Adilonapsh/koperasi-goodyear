@@ -18,9 +18,9 @@ class DataPotonganKoperasiLayouts extends Component
 
     public function mount()
     {
-        $this->yearAvailable = Deduction::with("member","group")->where("cc","0".Auth::user()->cc)->distinct("tanggal")->get()->map(function($x){
+        $this->yearAvailable = array_unique(Deduction::with("member","group")->where("cc","0".Auth::user()->cc)->distinct("tanggal")->get()->map(function($x){
             return Carbon::parse($x->tanggal)->format("Y");
-        });
+        })->toArray());
     }
 
     public function showTable()

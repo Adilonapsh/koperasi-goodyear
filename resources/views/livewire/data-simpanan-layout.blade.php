@@ -89,64 +89,64 @@
                 <div class="px-5">
                     <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
                         <tr>
-                            <td>Saldo Awal</td>
-                            <td class="text-end">Rp. {{ number_format($data["saldo_utama"],0) }}</td>
+                            <td class="">Saldo Awal</td>
+                            <td class="text-end ">Rp. {{ number_format($data["saldo_utama"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>Januari</td>
-                            <td class="text-end">Rp. {{ number_format($data["januari"],0) }}</td>
+                            <td class="">Januari</td>
+                            <td class="text-end ">Rp. {{ number_format($data["januari"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>Februari</td>
-                            <td class="text-end">Rp. {{ number_format($data["februari"],0) }}</td>
+                            <td class="">Februari</td>
+                            <td class="text-end ">Rp. {{ number_format($data["februari"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>Maret</td>
-                            <td class="text-end">Rp. {{ number_format($data["maret"],0) }}</td>
+                            <td class="">Maret</td>
+                            <td class="text-end ">Rp. {{ number_format($data["maret"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>April</td>
-                            <td class="text-end">Rp. {{ number_format($data["april"],0) }}</td>
+                            <td class="">April</td>
+                            <td class="text-end ">Rp. {{ number_format($data["april"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>Mei</td>
-                            <td class="text-end">Rp. {{ number_format($data["mei"],0) }}</td>
+                            <td class="">Mei</td>
+                            <td class="text-end ">Rp. {{ number_format($data["mei"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>Juni</td>
-                            <td class="text-end">Rp. {{ number_format($data["juni"],0) }}</td>
+                            <td class="">Juni</td>
+                            <td class="text-end ">Rp. {{ number_format($data["juni"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>Juli</td>
-                            <td class="text-end">Rp. {{ number_format($data["juli"],0) }}</td>
+                            <td class="">Juli</td>
+                            <td class="text-end ">Rp. {{ number_format($data["juli"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>Agustus</td>
-                            <td class="text-end">Rp. {{ number_format($data["agustus"],0) }}</td>
+                            <td class="">Agustus</td>
+                            <td class="text-end ">Rp. {{ number_format($data["agustus"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>September</td>
-                            <td class="text-end">Rp. {{ number_format($data["september"],0) }}</td>
+                            <td class="">September</td>
+                            <td class="text-end ">Rp. {{ number_format($data["september"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>Oktober</td>
-                            <td class="text-end">Rp. {{ number_format($data["oktober"],0) }}</td>
+                            <td class="">Oktober</td>
+                            <td class="text-end ">Rp. {{ number_format($data["oktober"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>November</td>
-                            <td class="text-end">Rp. {{ number_format($data["november"],0) }}</td>
+                            <td class="">November</td>
+                            <td class="text-end ">Rp. {{ number_format($data["november"],0) }}</td>
                         </tr>
                         <tr>
-                            <td>Desember</td>
-                            <td class="text-end">Rp. {{ number_format($data["desember"],0) }}</td>
+                            <td class="">Desember</td>
+                            <td class="text-end ">Rp. {{ number_format($data["desember"],0) }}</td>
                         </tr>
                         <tr class="font-bold">
-                            <td>Total Tahun Ini</td>
-                            <td class="text-end">Rp. {{ number_format($data["total_tahun_ini"],0) }}</td>
+                            <td class="">Total Tahun Ini</td>
+                            <td class="text-end ">Rp. {{ number_format($data["total_tahun_ini"],0) }}</td>
                         </tr>
                         <tr class="font-bold">
-                            <td>Total Saldo Awal + Tahun Ini</td>
-                            <td class="text-end">Rp. {{ number_format($data["total_saldo_awal_tahun_ini"],0) }}</td>
+                            <td class="">Total Saldo Awal + Tahun Ini</td>
+                            <td class="text-end ">Rp. {{ number_format($data["total_saldo_awal_tahun_ini"],0) }}</td>
                         </tr>
                     </table>
                 </div>

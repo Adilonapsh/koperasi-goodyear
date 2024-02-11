@@ -1,5 +1,5 @@
 <div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div class="grid grid-cols-1 lg:grid-cols-1 gap-10">
         <div class="mb-5">
             <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Plafon Konsumsi</h5>
             <div class="px-5">

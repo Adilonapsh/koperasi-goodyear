@@ -107,7 +107,7 @@
     @endif
     @if ($is_table_loaded)
     {{-- @json($deductionData); --}}
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols-1 gap-10">
             <div>
                 <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Daftar Yang Terpotong</h5>
                 <div class="mb-5 px-2">
@@ -149,138 +149,8 @@
                         @endforeach
                     @endforeach
                 </div>
-                {{-- <div class="mb-5 px-2">
-                    <p class="font-bold">302 Simpanan Sukarela</p>
-                    <div class="px-5">
-                        <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
-                            <tr>
-                                <td>Jumlah</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->min_belanja) }}</td>
-                            </tr>
-                            <tr>
-                                <td>Jasa Pinjaman</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->maks_ds) }}</td>
-                            </tr>
-                            <tr>
-                                <td>Jumlah Potongan</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Saldo</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Jangka Waktu</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Bayar</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-
-                        </table>
-                    </div>
-                </div> --}}
                 <hr class="mb-2">
-                {{-- <div class="mb-5 px-2">
-                    <p class="font-bold">Total</p>
-                    <div class="px-5">
-                        <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
-                            <tr>
-                                <td>Jumlah</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->min_belanja) }}</td>
-                            </tr>
-                            <tr>
-                                <td>Jasa Pinjaman</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->maks_ds) }}</td>
-                            </tr>
-                            <tr>
-                                <td>Jumlah Potongan</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Saldo</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Jangka Waktu</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Bayar</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-
-                        </table>
-                    </div>
-                </div> --}}
             </div>
-            {{-- <div>
-                <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Daftar Yang Tidak Terpotong</h5>
-                <div class="mb-5 px-2">
-                    <p class="font-bold">273T Perpanjangan 5 Bulan</p>
-                    <div class="px-5">
-                        <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
-                            <tr>
-                                <td>Jumlah</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->min_belanja) }}</td>
-                            </tr>
-                            <tr>
-                                <td>Jasa Pinjaman</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->maks_ds) }}</td>
-                            </tr>
-                            <tr>
-                                <td>Jumlah Tidak Dipotong</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Saldo</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Jangka Waktu</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Bayar</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <hr class="mb-2">
-                <div class="mb-5 px-2">
-                    <p class="font-bold">Total</p>
-                    <div class="px-5">
-                        <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
-                            <tr>
-                                <td>Jumlah</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->min_belanja) }}</td>
-                            </tr>
-                            <tr>
-                                <td>Jasa Pinjaman</td>
-                                <td class="text-end">Rp. {{ number_format(Auth::user()->maks_ds) }}</td>
-                            </tr>
-                            <tr>
-                                <td>Jumlah Tidak Dipotong</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Saldo</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Jangka Waktu</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                            <tr>
-                                <td>Bayar</td>
-                                <td class="text-end">{{ Auth::user()->pinjaman_sebelumnya}}</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     @endif
 
