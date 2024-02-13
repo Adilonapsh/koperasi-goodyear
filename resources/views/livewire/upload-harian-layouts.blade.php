@@ -1,14 +1,19 @@
 <div>
     <div class="mb-2">
         <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload file</label>
-        <input
-            class="block w-full text-sm text-green-800 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-            wire:model="file_upload" type="file"
-            accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+        <div class="flex items-center justify-center">
+            <input
+                type="file"
+                class="block w-full text-sm text-green-800 bg-slate-50 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                wire:model="file_upload"/>
+                @if ($file_upload)
+                <span class="text-2xl mx-2 text-green-400"><i class="fa-solid fa-circle-check"></i></span>
+                @endif
+        </div>
         <div wire:loading wire:target="file_upload">
             Uploading ...
         </div>
-        <small>File Harus dengan Format (.xls, .xlsx)</small>
+        <small>File Harus dengan Format (.xlsx)</small>
     </div>
     <button
         class="w-full lg:w-fit text-white bg-green-900 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 "

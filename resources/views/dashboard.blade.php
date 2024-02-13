@@ -44,11 +44,13 @@
                             <p>Simpanan</p>
                         </div>
                     </a>
-                    <a href="{{ route('upload-harian.index') }}" class="hover:shadow-lg transition-all">
-                        <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
-                            <p>Upload Harian</p>
-                        </div>
-                    </a>
+                    @hasanyrole("admin")
+                        <a href="{{ route('upload-harian.index') }}" class="hover:shadow-lg transition-all">
+                            <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
+                                <p>Update Harian</p>
+                            </div>
+                        </a>
+                    @endhasanyrole
                 </div>
             </div>
         </div>

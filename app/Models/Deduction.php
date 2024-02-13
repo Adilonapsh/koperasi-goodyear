@@ -6,12 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Auth;
+
 
 class Deduction extends Model
 {
     use HasFactory;
 
     protected $table = "tbl_deduction";
+    protected $guarded = ["id"];
 
     protected $fillable = [
         "active",
@@ -38,5 +41,11 @@ class Deduction extends Model
     public function group() : HasOne
     {
         return $this->hasOne(InviteGroup::class, 'id', 'group_id');
+    }
+
+    public static function booted(){
+        static::creating(function ($model) {
+            $model->user_id = Auth::user()->id;
+        });
     }
 }

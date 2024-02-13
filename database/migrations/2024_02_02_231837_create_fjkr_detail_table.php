@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string("no_fj");
             $table->string("kode_barang");
-            $table->string("harga_jual");
-            $table->string("jumlah_harga");
-            $table->integer("pot");
-            $table->string("barcode");
+            $table->string("harga_barang");
+            $table->string("jumlah_barang");
+            $table->integer("pot")->nullable();
+            $table->string("barcode")->nullable();
             $table->timestamps();
         });
     }

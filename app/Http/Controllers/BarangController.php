@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Barang;
 use Illuminate\Http\Request;
 
 class BarangController extends Controller
@@ -11,6 +12,7 @@ class BarangController extends Controller
      */
     public function index()
     {
+        // return Barang::where("nama_barang", 'ilike', '%'."minyak".'%')->get();
         return view("barang.index");
     }
 

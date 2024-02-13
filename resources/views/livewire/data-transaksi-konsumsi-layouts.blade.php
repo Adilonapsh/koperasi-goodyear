@@ -17,16 +17,16 @@
                             @foreach ($fjkr->fjkrDetail as $key => $detail)
                                 <tr>
                                     <td class="px-4 border">
-                                        {{ $detail->jumlah_harga }}
+                                        {{ $detail->jumlah_barang }}
                                         {{ $detail->fk_barang ? $detail->fk_barang->satuan : "PCS" }}
                                         {{ $detail->kode_barang }}
                                         {{ $detail->fk_barang ? $detail->fk_barang->nama_barang : $detail->kode_barang }}
                                     </td>
-                                    <td class="text-end border">Rp. {{ number_format($detail->harga_jual) }}</td>
-                                    <td class="text-end border">Rp. {{ number_format(($detail->jumlah_harga * $detail->harga_jual)) }}</td>
+                                    <td class="text-end border">Rp. {{ number_format($detail->harga_barang) }}</td>
+                                    <td class="text-end border">Rp. {{ number_format(($detail->jumlah_barang * $detail->harga_barang)) }}</td>
                                     @php
-                                        $subTotal += $detail->jumlah_harga * $detail->harga_jual;
-                                        $grandTotal += $detail->jumlah_harga * $detail->harga_jual;
+                                        $subTotal += $detail->jumlah_barang * $detail->harga_barang;
+                                        $grandTotal += $detail->jumlah_barang * $detail->harga_barang;
                                     @endphp
                                 </tr>
                             @endforeach

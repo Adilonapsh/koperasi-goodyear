@@ -5,6 +5,7 @@ namespace App\Livewire;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use App\Models\Barang;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 
 class BarangTable extends DataTableComponent
 {
@@ -24,7 +25,10 @@ class BarangTable extends DataTableComponent
                 ->searchable()
                 ->sortable(),
             Column::make("Nama Barang", "nama_barang")
-                ->searchable()
+                ->searchable(function(Builder $query, $searchTerm){
+                    $data = $query->orWhere("nama_barang",'ilike','%'.$searchTerm.'%');
+                    return $data;
+                })
                 ->sortable(),
             Column::make("Satuan", "satuan")
                 ->sortable(),

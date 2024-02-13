@@ -6,12 +6,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Auth;
+
 
 class FJKR extends Model
 {
     use HasFactory;
 
     protected $table = "fjkr";
+    protected $guarded = ["id"];
+
 
     public function member() : BelongsTo
     {
@@ -21,5 +25,11 @@ class FJKR extends Model
     public function fjkrDetail() : HasMany
     {
         return $this->hasMany(FJKRDetail::class,"no_fj","no_fj");
+    }
+
+    public static function booted(){
+        static::creating(function ($model) {
+            $model->user_id = Auth::user()->id;
+        });
     }
 }
