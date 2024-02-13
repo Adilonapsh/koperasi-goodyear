@@ -24,27 +24,27 @@
                             <p>Potongan Koperasi</p>
                         </div>
                     </a>
-                    <a href="{{ route("plafon-konsumsi.index") }}" class="hover:shadow-lg transition-all">
+                    <a href="{{ route('plafon-konsumsi.index') }}" class="hover:shadow-lg transition-all">
                         <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
                             <p>Plafon Konsumsi</p>
                         </div>
                     </a>
-                    <a href="{{ route("transaksi-konsumsi.index") }}" class="hover:shadow-lg transition-all">
+                    <a href="{{ route('transaksi-konsumsi.index') }}" class="hover:shadow-lg transition-all">
                         <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
                             <p>Transaksi Konsumsi</p>
                         </div>
                     </a>
-                    <a href="{{ route("barang.index") }}" class="hover:shadow-lg transition-all">
+                    <a href="{{ route('barang.index') }}" class="hover:shadow-lg transition-all">
                         <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
                             <p>Harga Barang</p>
                         </div>
                     </a>
-                    <a href="{{ route("simpanan.index") }}" class="hover:shadow-lg transition-all">
+                    <a href="{{ route('simpanan.index') }}" class="hover:shadow-lg transition-all">
                         <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
                             <p>Simpanan</p>
                         </div>
                     </a>
-                    <a href="#" class="hover:shadow-lg transition-all">
+                    <a href="{{ route('upload-harian.index') }}" class="hover:shadow-lg transition-all">
                         <div class="flex bg-gray-200 h-[200px] items-center text-center justify-center shadow-lg">
                             <p>Upload Harian</p>
                         </div>

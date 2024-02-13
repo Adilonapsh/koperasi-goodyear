@@ -6,6 +6,7 @@ use App\Http\Controllers\PotonganKoperasiController;
 use App\Http\Controllers\SimpananController;
 use App\Http\Controllers\StatusDanaSegarController;
 use App\Http\Controllers\TransaksiKonsumsiController;
+use App\Http\Controllers\UploadHarianController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,4 +39,5 @@ Route::middleware([
     Route::resource('transaksi-konsumsi', TransaksiKonsumsiController::class);
     Route::resource('barang', BarangController::class);
     Route::resource('simpanan', SimpananController::class);
+    Route::resource('upload-harian', UploadHarianController::class);
 });
