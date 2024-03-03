@@ -52,7 +52,7 @@
             <div class="px-5">
                 <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
                     <tr>
-                        <td>Angsuran Bulan 01-2024</td>
+                        <td>Angsuran</td>
                         <td class="text-end">Rp. {{ number_format(Auth::user()->total_belanja) }}</td>
                     </tr>
                 </table>

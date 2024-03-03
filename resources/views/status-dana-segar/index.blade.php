@@ -1,7 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Status Dana Segar') }}
+            <div class="flex gap-5 items-center">
+                <i class="fa-solid fa-square-poll-horizontal text-4xl"></i>
+                {{ __('Status Dana Segar') }}
+            </div>
         </h2>
     </x-slot>
 
@@ -45,6 +48,9 @@
                         <p class="text-center font-bold">{{ str_replace("_"," ",Auth::user()->ket)  }}</p>
                     </div>
                 </div>
+            </div>
+            <div>
+                <p class="text-sm">Terakhir Update : {{ Auth::user()->updated_at }}</p>
             </div>
         </div>
     </div>

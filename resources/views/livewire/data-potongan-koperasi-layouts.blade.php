@@ -106,7 +106,6 @@
         </div>
     @endif
     @if ($is_table_loaded)
-    {{-- @json($deductionData); --}}
         <div class="grid grid-cols-1 lg:grid-cols-1 gap-10">
             <div>
                 <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">Daftar Yang Terpotong</h5>
@@ -150,6 +149,9 @@
                     @endforeach
                 </div>
                 <hr class="mb-2">
+                {{-- <div>
+                    <p class="text-sm">Terakhir Update : {{ Auth::user()->updated_at }}</p>
+                </div> --}}
             </div>
         </div>
     @endif

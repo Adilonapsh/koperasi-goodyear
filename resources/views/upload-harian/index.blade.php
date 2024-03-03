@@ -1,7 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Update Harian') }}
+            <div class="flex gap-5 items-center">
+                <i class="fa-solid fa-download text-4xl"></i>
+                {{ __('Update Harian') }}
+            </div>
         </h2>
     </x-slot>
 

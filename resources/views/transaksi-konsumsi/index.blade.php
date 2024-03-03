@@ -1,7 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Transaksi Konsumsi') }}
+            <div class="flex gap-5 items-center">
+                <i class="fa-solid fa-right-left text-4xl"></i>
+                {{ __('Transaksi Konsumsi') }}
+            </div>
         </h2>
     </x-slot>
 

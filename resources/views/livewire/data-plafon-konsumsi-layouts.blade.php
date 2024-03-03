@@ -22,6 +22,10 @@
                     </tr>
                 </table>
             </div>
+            <hr>
+            <div class="mt-2">
+                <p class="text-sm">Terakhir Update : {{ Auth::user()->updated_at }}</p>
+            </div>
         </div>
     </div>
 </div>

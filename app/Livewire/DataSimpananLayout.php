@@ -62,6 +62,7 @@ class DataSimpananLayout extends Component
             $item["oktober"] = $x["mtd_".$tbl_simpanan[$simpanan]."10"];
             $item["november"] = $x["mtd_".$tbl_simpanan[$simpanan]."11"];
             $item["desember"] = $x["mtd_".$tbl_simpanan[$simpanan]."12"];
+            $item["updated_at"] = $x["updated_at"];
 
             $valuesToExclude = [-1];
             $filteredItem = array_diff($item, $valuesToExclude);
