@@ -48,7 +48,7 @@ class DataSimpananLayout extends Component
             $this->is_table_loaded = false;
             return;
         }
-        $this->data = Simpanan::with("member")->where("cc","0".Auth::user()->cc)->get()->map(function($x) use ($tbl_simpanan, $simpanan){
+        $this->data = Simpanan::with("member")->where("cc",Auth::user()->cc)->get()->map(function($x) use ($tbl_simpanan, $simpanan){
             $item["saldo_utama"] = $x["ytd_".$tbl_simpanan[$simpanan]];
             $item["januari"] = $x["mtd_".$tbl_simpanan[$simpanan]."01"];
             $item["februari"] = $x["mtd_".$tbl_simpanan[$simpanan]."02"];

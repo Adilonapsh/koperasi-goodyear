@@ -83,7 +83,7 @@
                 </div>
             </div>
         @endif
-        @if ($is_table_loaded)
+        @if ($is_table_loaded && $data)
             <div class="mb-5">
                 <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">{{ $simpanan }}</h5>
                 <div class="px-5">
@@ -147,6 +147,74 @@
                         <tr class="font-bold">
                             <td class="">Total Saldo Awal + Tahun Ini</td>
                             <td class="text-end ">Rp. {{ number_format($data["total_saldo_awal_tahun_ini"],0) }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        @else
+            <div class="mb-5">
+                <h5 class="text-2xl mb-2 bg-green-600 text-white py-5 text-center">{{ $simpanan }}</h5>
+                <div class="px-5">
+                    <table class="w-full text-sm text-left rtl:text-right dark:text-gray-400">
+                        <tr>
+                            <td class="">Saldo Awal</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">Januari</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">Februari</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">Maret</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">April</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">Mei</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">Juni</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">Juli</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">Agustus</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">September</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">Oktober</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">November</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr>
+                            <td class="">Desember</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr class="font-bold">
+                            <td class="">Total Tahun Ini</td>
+                            <td class="text-end ">Rp. 0</td>
+                        </tr>
+                        <tr class="font-bold">
+                            <td class="">Total Saldo Awal + Tahun Ini</td>
+                            <td class="text-end ">Rp. 0</td>
                         </tr>
                     </table>
                 </div>

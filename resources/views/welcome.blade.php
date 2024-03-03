@@ -56,14 +56,14 @@
                         <a href="#tentang"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Tentang</a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="#berita"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Berita</a>
-                    </li>
-                    <li>
+                    </li> --}}
+                    {{-- <li>
                         <a href="#faq"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">FAQ</a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a href="#kontak"
                             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Kontak</a>
@@ -73,7 +73,7 @@
         </div>
     </nav>
     <section id="home">
-        <div class="h-screen flex flex-col items-center justify-center text-center">
+        <div class="min-h-screen mb-7 flex flex-col items-center justify-center text-center">
             <h1 class="text-5xl md:text-7xl leading-normal mb-4 " data-aos="fade-right" data-aos-delay="20">
                 Tumbuh bersama kami membangun <br>
                 <span class="font-bold">Ekosistem</span> digital dalam dunia koperasi
@@ -96,13 +96,13 @@
         </div>
     </section>
 
-    <section id="why" class="relative h-[40rem] bg-[#020266] text-white">
+    <section id="tentang" class="relative h-[40rem] bg-[#020266] text-white">
         <div class="grid grid-cols-1 xl:grid-cols-2 h-full px-5 lg:px-72">
             <div class="flex flex-col gap-2 items-center xl:items-start justify-center">
                 <h4 class="text-lg text-[#f1d51e] font-bold" data-aos="fade-right" data-aos-delay="100"
                     data-aos-duration="1000">Kenapa Pilih
                     Kami ?</h4>
-                <h2 class="text-8xl font-bold" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+                <h2 class="text-7xl text-center lg:text-start lg:text-8xl font-bold" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
                     {{ env('APP_NAME') }}</h2>
                 <h2 class="text-lg" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
                     {{ env('APP_NAME') }} mendukung bisnis di
@@ -128,7 +128,7 @@
         </div>
     </section>
 
-    <section id="berita" class="min-h-[40rem] py-10">
+    {{-- <section id="berita" class="min-h-[40rem] py-10">
         <div class="h-full flex flex-col items-center">
             <h3 class="text-4xl font-bold mb-10 text-[#020266]" data-aos="fade-up" data-aos-delay="200">Berita
             </h3>
@@ -215,10 +215,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
-    <footer class="bg-white dark:bg-gray-900">
+    <footer class="bg-white dark:bg-gray-900" id="kontak">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
@@ -229,29 +229,29 @@
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                    <div>
+                    {{-- <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
                                 <a href="#" class="hover:underline">Berita</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                     <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="#" class="hover:underline ">Facebook</a>
+                                <a href="https://www.facebook.com/profile.php?id=100075901344397" target="_blank" class="hover:underline ">Facebook</a>
                             </li>
                             <li class="mb-4">
                                 <a href="#" class="hover:underline">Twitter</a>
                             </li>
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">Instagram</a>
+                                <a href="https://www.instagram.com/kopkar_goodyear/" target="_blank" class="hover:underline">Instagram</a>
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    {{-- <div>
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
@@ -261,7 +261,7 @@
                                 <a href="#" class="hover:underline">Terms &amp; Conditions</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
@@ -271,7 +271,7 @@
                     Reserved.
                 </span>
                 <div class="flex mt-4 sm:justify-center sm:mt-0">
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                    <a href="https://www.facebook.com/profile.php?id=100075901344397" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                         <i class="fa-brands fa-facebook"></i>
                         <span class="sr-only">Facebook page</span>
                     </a>
@@ -279,7 +279,7 @@
                         <i class="fa-brands fa-x-twitter"></i>
                         <span class="sr-only">Twitter page</span>
                     </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                    <a href="https://www.instagram.com/kopkar_goodyear/" target="_blank" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
                         <i class="fa-brands fa-instagram"></i>
                         <span class="sr-only">Intagram page</span>
                     </a>

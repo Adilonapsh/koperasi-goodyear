@@ -8,9 +8,16 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="mb-3 px-5 lg:p-0">
-                <h1 class="text-4xl">Selamat Datang,</h1>
-                <h4 class="text-2xl font-bold">{{ Auth::user()->name }}.</h4>
+            <div class="flex items-center gap-5 rounded-lg">
+                @if (Auth::user()->cc)
+                    <div class="p-5 bg-gray-50">
+                        <img src="{{ asset('/foto').'/'. Auth::user()->cc . ".JPG" }}" width="100px"  alt="">
+                    </div>
+                @endif
+                <div class="mb-3 px-5 lg:p-0">
+                    <h1 class="text-4xl">Selamat Datang,</h1>
+                    <h4 class="text-2xl font-bold">{{ Auth::user()->name }}.</h4>
+                </div>
             </div>
             <div class="bg-gray-50 p-10 rounded-lg shadow-lg">
                 <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
@@ -27,7 +34,8 @@
                         <div
                             class="flex bg-gray-200 py-10 h-[150px] lg:h-[200px] items-center text-center justify-center shadow-lg">
                             <div>
-                                <i class="fa-solid fa-percent text-4xl lg:text-5xl text-red-500"></i>
+                                {{-- <i class="fa-solid fa-percent "></i> --}}
+                                <i class="fa-solid fa-cubes text-4xl lg:text-5xl text-red-500"></i>
                                 <p>Potongan Koperasi</p>
                             </div>
                         </div>

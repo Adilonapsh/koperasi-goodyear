@@ -30,6 +30,15 @@ class User extends Authenticatable
         'email',
         'username',
         'cc',
+        'min_belanja',
+        'maks_ds',
+        'pinjaman_sebelumnya',
+        'total_belanja',
+        'sisa_lalu',
+        'ket',
+        'plafon',
+        'pk',
+        'saldo',
         'password',
     ];
 

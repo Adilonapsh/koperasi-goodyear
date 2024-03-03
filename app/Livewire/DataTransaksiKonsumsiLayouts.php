@@ -18,7 +18,7 @@ class DataTransaksiKonsumsiLayouts extends Component
                     $query->with("fk_barang")->get();
                 }
             ]
-        )->where("cc","0".Auth::user()->cc)->get();
+        )->where("cc",Auth::user()->cc)->get();
     }
 
     public function render()

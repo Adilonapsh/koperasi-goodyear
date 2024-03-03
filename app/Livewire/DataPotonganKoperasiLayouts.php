@@ -18,7 +18,7 @@ class DataPotonganKoperasiLayouts extends Component
 
     public function mount()
     {
-        $this->yearAvailable = array_unique(Deduction::with("member","group")->where("cc","0".Auth::user()->cc)->distinct("tanggal")->get()->map(function($x){
+        $this->yearAvailable = array_unique(Deduction::with("member","group")->where("cc", Auth::user()->cc)->distinct("tanggal")->get()->map(function($x){
             return Carbon::parse($x->tanggal)->format("Y");
         })->toArray());
     }
@@ -26,7 +26,7 @@ class DataPotonganKoperasiLayouts extends Component
     public function showTable()
     {
         $this->is_table_loaded = true;
-        $query = Deduction::query()->with("member","group")->where("cc","0".Auth::user()->cc);
+        $query = Deduction::query()->with("member","group")->where("cc",Auth::user()->cc);
         ($bulan) ?? $query->whereMonth("tanggal",$this->bulan);
         ($tahun) ?? $query->whereYear("tanggal",$this->tahun);
         $this->deductionData = collect($query->get())->groupBy("group.desc");

@@ -24,7 +24,7 @@ class UploadHarianLayouts extends Component
                 $excel = Excel::import(new UploadHarianImport, $this->file_upload, null, \Maatwebsite\Excel\Excel::XLSX);
                 $this->alert('success', 'Berhasil mengimport data.');
             }catch(QueryException $e){
-                $this->alert('error', 'Terjadi Kesalahan saat mengimport data.');
+                $this->alert('error', 'Terjadi Kesalahan query saat mengimport data.');
             }catch(Exception $e){
                 $this->alert('error', 'Pastikan file berformat .XLSX');
             }
