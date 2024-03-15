@@ -21,7 +21,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return redirect("login");
 });
 
 Route::middleware([
@@ -40,4 +41,5 @@ Route::middleware([
     Route::resource('barang', BarangController::class);
     Route::resource('simpanan', SimpananController::class);
     Route::resource('upload-harian', UploadHarianController::class);
+    Route::get('faq', function(){return view("faq");})->name("faq");
 });
