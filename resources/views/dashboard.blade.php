@@ -87,6 +87,15 @@
                             </div>
                         </a>
                     @endhasanyrole
+                    <a href="{{ route('faq') }}" class="hover:shadow-lg transition-all">
+                        <div
+                            class="flex bg-gray-200 py-10 h-[150px] lg:h-[200px] items-center text-center justify-center shadow-lg">
+                            <div>
+                                <i class="fa-solid fa-question text-4xl lg:text-5xl text-blue-700"></i>
+                                <p>FAQ</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
