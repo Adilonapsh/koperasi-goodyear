@@ -82,8 +82,8 @@
                                         <ul class="ms-5 mb-5">
                                             <li>2.1.1. Simpanan Sukarela (potong gaji atau langsung)</li>
                                             <ul class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 ms-5">
-                                                <li>Bila melalui potong gaji, mengisi form sukarela di kasir koperasi ( <tgl
-                                                    15 diproses belum berjalan, >15 diproses dibulan berikutnya) </li>
+                                                <li>Bila melalui potong gaji, mengisi form sukarela di kasir koperasi (< tgl
+                                                    15 diproses belum berjalan, > 15 diproses dibulan berikutnya) </li>
                                                 <li>Menyetor uang tunai/bukti transfer bank ke kasir dan dibuatkan kwitansi resmi koperasi .</li>
                                             </ul>
                                             <li>2.1.2. Dana Titipan</li>
@@ -129,29 +129,29 @@
                                 <div class="p-5 border border-gray-200 dark:border-gray-700">
                                     <ul class="ps-5 mt-2 space-y-1">
                                         <li>3.1 Optik</li>
-                                        <ul class="ms-5 mb-5">
-                                            <li>3.1.1. Optik Kasoem (CCM, Botani Square, RS PMI) </li>
-                                            <li>3.1.2. Optik Neo (Yogja junction, Cilendek-samping SPBU) </li>
-                                            <li>3.1.3. Optik Kayumanis ( Hypermart yasmin, Plaza Jambu Dua, Cisarua, Cibedug Ciawi, Cimahpar,
+                                        <ul class="ms-5 mb-5 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 ms-5">
+                                            <li>Optik Kasoem (CCM, Botani Square, RS PMI) </li>
+                                            <li>Optik Neo (Yogja junction, Cilendek-samping SPBU) </li>
+                                            <li>Optik Kayumanis ( Hypermart yasmin, Plaza Jambu Dua, Cisarua, Cibedug Ciawi, Cimahpar,
                                                 Pertokoan Cibadak Cijeruk ). </li>
                                         </ul>
                                         <li>3.2 Bengkel Motor</li>
-                                        <ul class="ms-5 mb-5">
-                                            <li>3.2.1. PT Sanprima Sentosa-AHASS  Jl. Jend. Sudirman Bogor</li>
-                                            <li>3.2.2. CV Guna motor-AHASS Jl. K.S. Tubun Bogor (Olympic)</li>
-                                            <li>3.2.3. CV Pahlawan-AHASS Jl. Raya Ciomas Gunung Batu Bogor </li>
-                                            <li>3.2.4. CV Dwi Makmur motor-AHASS Jl. K.H. Soleh Iskandar</li>
-                                            <li>3.2.5. Yamaha Mekar Motor-YAMAHA Jl. Pajajaran Bogor</li>
-                                            <li>3.2.6. Jayamandiri Gemasejati Motor- YAMAHA Jl. Siliwangi Bogor</li>
+                                        <ul class="ms-5 mb-5 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 ms-5">
+                                            <li>PT Sanprima Sentosa-AHASS  Jl. Jend. Sudirman Bogor</li>
+                                            <li>CV Guna motor-AHASS Jl. K.S. Tubun Bogor (Olympic)</li>
+                                            <li>CV Pahlawan-AHASS Jl. Raya Ciomas Gunung Batu Bogor </li>
+                                            <li>CV Dwi Makmur motor-AHASS Jl. K.H. Soleh Iskandar</li>
+                                            <li>Yamaha Mekar Motor-YAMAHA Jl. Pajajaran Bogor</li>
+                                            <li>Jayamandiri Gemasejati Motor- YAMAHA Jl. Siliwangi Bogor</li>
                                         </ul>
                                         <li>3.3 Seragam, sandang, & sepatu olahraga/casual</li>
-                                        <ul class="ms-5 mb-5">
-                                            <li>3.3.1. Toko ABC Fashion– Pasar Anyar Bogor </li>
-                                            <li>3.3.2. Toko Tembako- Jembatan Merah Bogor</li>
+                                        <ul class="ms-5 mb-5 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 ms-5">
+                                            <li>Toko ABC Fashion– Pasar Anyar Bogor </li>
+                                            <li>Toko Tembako- Jembatan Merah Bogor</li>
                                         </ul>
                                         <li>3.4 Helm, jas hujan, dll</li>
-                                        <ul class="ms-5 mb-5">
-                                            <li>3.4.1. Noval Helm-Cihideung Bogor</li>
+                                        <ul class="ms-5 mb-5 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400 ms-5">
+                                            <li>Noval Helm-Cihideung Bogor</li>
                                         </ul>
                                     </ul>
                                 </div>
