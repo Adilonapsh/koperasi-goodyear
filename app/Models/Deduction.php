@@ -18,10 +18,10 @@ class Deduction extends Model
 
     protected $fillable = [
         "active",
-        "tanggal",
+        "tgl",
         "cc",
         "bulan",
-        "group_id",
+        "group",
         "principal",
         "interest",
         "original",
@@ -40,7 +40,7 @@ class Deduction extends Model
 
     public function group() : HasOne
     {
-        return $this->hasOne(InviteGroup::class, 'id', 'group_id');
+        return $this->hasOne(InviteGroup::class, 'idgrup', 'group_id');
     }
 
     public static function booted(){

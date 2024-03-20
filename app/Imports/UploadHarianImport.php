@@ -7,6 +7,7 @@ use App\Imports\Sheets\SheetsBarang;
 use App\Imports\Sheets\SheetsDeduction;
 use App\Imports\Sheets\SheetsFjkr;
 use App\Imports\Sheets\SheetsFjkrDetail;
+use App\Imports\Sheets\SheetsInviteGroup;
 use App\Imports\Sheets\SheetsSimpanan;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Maatwebsite\Excel\Concerns\SkipsUnknownSheets;
@@ -27,6 +28,7 @@ class UploadHarianImport implements WithMultipleSheets, SkipsUnknownSheets
             'tblFJKRDetail' => new SheetsFjkrDetail(),
             'tblDeduction' => new SheetsDeduction(),
             'tblSimpanan' => new SheetsSimpanan(),
+            'tblInvtGroup' => new SheetsInviteGroup(),
         ];
     }
 

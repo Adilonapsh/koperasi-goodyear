@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('tbl_deduction', function (Blueprint $table) {
             $table->id();
-            $table->boolean("active");
-            $table->date("tanggal");
+            $table->string("active");
+            $table->date("tgl");
             $table->string("cc");
             $table->integer("bulan");
             $table->integer("group");

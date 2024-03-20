@@ -13,16 +13,17 @@ return new class extends Migration
     {
         Schema::create('tbl_invite_group', function (Blueprint $table) {
             $table->id();
+            $table->int("idgrup");
             $table->text("desc");
-            $table->foreignId("from_user");
-            $table->foreignId("to_user");
+            $table->foreignId("dari");
+            $table->foreignId("untuk");
             $table->integer("stime");
             $table->integer("htime");
-            $table->string("flat");
-            $table->integer("kode_int");
-            $table->integer("year");
-            $table->integer("rate");
-            $table->integer("achkal");
+            $table->string("flat")->nullable();
+            $table->integer("kodeint");
+            $table->integer("intyear");
+            $table->integer("inrate");
+            $table->string("ackal");
             $table->integer("prioritas");
             $table->foreignId("user_id");
             $table->timestamps();
